@@ -1,0 +1,40 @@
+{
+  "name": "Duy Extension",
+  "version": "1.0",
+  "description": "Ban member for group",
+  "permissions": [
+    "declarativeContent",
+    "contextMenus",
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "scripts": [
+      "jquery-3.3.1.slim.min.js",
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "icons": {
+    "16": "images/16.png",
+    "32": "images/32.png",
+    "48": "images/48.png",
+    "128": "images/128.png"
+  },
+  "browser_action": {
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.facebook.com/*",
+        "*://facebook.com/*"
+      ],
+      "js": [
+        "jquery-3.3.1.slim.min.js",
+        "contentScript.js"
+      ]
+    }
+  ],
+  "manifest_version": 2
+}
+
